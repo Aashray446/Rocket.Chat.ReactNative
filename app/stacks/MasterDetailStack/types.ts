@@ -202,6 +202,11 @@ export type MasterDetailInsideStackParamList = {
 	AttachmentView: {
 		attachment: IAttachment;
 	};
+	CarouselView: {
+		rid: string;
+		t: SubscriptionType;
+		attachment: IAttachment;
+	};
 	ModalBlockView: {
 		data: any; // TODO: Change
 	};

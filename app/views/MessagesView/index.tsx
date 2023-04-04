@@ -202,6 +202,7 @@ class MessagesView extends React.Component<IMessagesViewProps, IMessagesViewStat
 							attachments: [
 								{
 									title: item.name,
+									ts: item.ts || item.uploadedAt,
 									description: item.description,
 									...getFileUrlFromMessage(item)
 								}
@@ -309,7 +310,11 @@ class MessagesView extends React.Component<IMessagesViewProps, IMessagesViewStat
 
 	showAttachment = (attachment: IAttachment) => {
 		const { navigation } = this.props;
-		navigation.navigate('AttachmentView', { attachment });
+		navigation.navigate('CarouselView', {
+			rid: this.rid,
+			attachment,
+			t: this.t
+		});
 	};
 
 	onLongPress = (message: IMessage) => {

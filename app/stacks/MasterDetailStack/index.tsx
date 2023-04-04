@@ -3,6 +3,7 @@ import { useIsFocused } from '@react-navigation/native';
 import { createStackNavigator, StackNavigationOptions, StackNavigationProp } from '@react-navigation/stack';
 import { createDrawerNavigator } from '@react-navigation/drawer';
 
+import CarouselView from '../../views/CarouselView';
 import { ThemeContext } from '../../theme';
 import {
 	FadeFromCenterModal,
@@ -218,6 +219,7 @@ const InsideStackNavigator = React.memo(() => {
 			<InsideStack.Screen name='DrawerNavigator' component={DrawerNavigator} options={{ headerShown: false }} />
 			<InsideStack.Screen name='ModalStackNavigator' component={ModalStackNavigator} options={{ headerShown: false }} />
 			<InsideStack.Screen name='AttachmentView' component={AttachmentView} />
+			<InsideStack.Screen name='CarouselView' component={CarouselView} />
 			<InsideStack.Screen name='ModalBlockView' component={ModalBlockView} options={ModalBlockView.navigationOptions} />
 			<InsideStack.Screen
 				name='JitsiMeetView'

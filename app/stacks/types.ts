@@ -264,6 +264,11 @@ export type InsideStackParamList = {
 	AttachmentView: {
 		attachment: IAttachment;
 	};
+	CarouselView: {
+		rid: string;
+		t: SubscriptionType;
+		attachment: IAttachment;
+	};
 	StatusView: undefined;
 	ShareView: {
 		attachments: IAttachment[];

@@ -31,6 +31,7 @@ export interface IAttachment {
 }
 
 export interface IServerAttachment {
+	typeGroup: string;
 	_id: string;
 	name: string;
 	size: number;

@@ -81,6 +81,7 @@ import {
 	SettingsStackParamList
 } from './types';
 import { isIOS } from '../lib/methods/helpers';
+import CarouselView from '../views/CarouselView';
 
 // ChatsStackNavigator
 const ChatsStack = createStackNavigator<ChatsStackParamList>();
@@ -308,6 +309,7 @@ const InsideStackNavigator = () => {
 				options={{ headerShown: false }}
 			/>
 			<InsideStack.Screen name='AttachmentView' component={AttachmentView} />
+			<InsideStack.Screen name='CarouselView' component={CarouselView} />
 			<InsideStack.Screen name='StatusView' component={StatusView} />
 			<InsideStack.Screen name='ShareView' component={ShareView} />
 			<InsideStack.Screen name='ModalBlockView' component={ModalBlockView} options={ModalBlockView.navigationOptions} />
